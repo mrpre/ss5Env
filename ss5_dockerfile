@@ -1,0 +1,3 @@
+COPY ss5_install.sh ./
+RUN ./ss5_install.sh
+CMD ["/bin/bash", "-c", "ss5 -u root -b 0.0.0.0:9001 && tail -f /var/log/ss5/ss5.log"]
